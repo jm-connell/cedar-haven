@@ -1,0 +1,258 @@
+:root {
+  --primary-color: #313c37;
+  --text-color: #f2efe8;
+  --accent-color: #a38873;
+  --button-bg-color: #313c37;
+  --button-text-color: #f2efe8;
+  --highlight-color: white;
+  --font-primary: "Georgia", serif;
+  --font-secondary: "Arial", sans-serif;
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+}
+
+.logo {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+.header-logo {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.header-image {
+  min-width: 150px;
+  max-width: 200px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.2s;
+  outline: 2px solid var(--accent-color);
+}
+
+.cta-button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Section styles */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.art-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.art-image {
+  width: 200px;
+  margin-right: 20px;
+}
+
+.art-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.join-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.join-card {
+  width: 30%;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 75px;
+  border: 2px solid var(--accent-color);
+  margin: 10px;
+  text-align: center;
+}
+
+.join-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.challenge-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.challenge-left,
+.challenge-right {
+  width: 45%;
+  padding: 20px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.challenge-image {
+  width: 150px;
+  height: 175px;
+  border-top-left-radius: 75px;
+  border-top-right-radius: 75px;
+  object-fit: cover;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--secondary-color);
+}
+
+.footer-logo {
+  font-size: 24px;
+  color: var(--highlight-color);
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-form input,
+.newsletter-form button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+.newsletter-form input {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+
+.newsletter-form button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .art-content {
+    flex-direction: column;
+  }
+
+  .art-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .join-cards,
+  .challenge-section {
+    flex-direction: column;
+  }
+
+  .join-card,
+  .challenge-left,
+  .challenge-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .newsletter-form {
+    width: 100%;
+  }
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.registration-info ul {
+  list-style-position: inside;
+  text-align: left;
+}
+
+.month-events ul {
+  list-style: none;
+  text-align: left;
+}
+
+.month-events {
+  max-width: 400px;
+}
