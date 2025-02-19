@@ -7,6 +7,7 @@
   --highlight-color: white;
   --font-primary: "Georgia", serif;
   --font-secondary: "Arial", sans-serif;
+  --font-cursive: "Lavishly Yours", serif;
 }
 
 /* Basic reset */
@@ -45,6 +46,11 @@ body {
   margin-bottom: 20px;
 }
 
+.footer-logo {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
 .header-image {
   min-width: 150px;
   max-width: 200px;
@@ -60,6 +66,16 @@ h1 {
 p {
   font-size: 18px;
   margin-bottom: 20px;
+}
+
+.cursive {
+  font-family: var(--font-cursive);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cursive-header {
+  font-size: 4rem;
 }
 
 .cta-button {
@@ -115,7 +131,7 @@ h3 {
   margin-bottom: 10px;
 }
 
-.join-cards {
+.join-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -129,11 +145,15 @@ h3 {
   border: 2px solid var(--accent-color);
   margin: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .join-image {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50px;
 }
@@ -161,6 +181,11 @@ h3 {
   object-fit: cover;
 }
 
+.challenge-requirements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 /* Footer styles */
 .footer {
   text-align: center;
@@ -178,6 +203,10 @@ h3 {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+}
+
+.footer-image {
+  width: 300px;
 }
 
 .newsletter-form {
@@ -207,6 +236,11 @@ h3 {
   cursor: pointer;
 }
 
+#challenge-divider {
+  width: 80%;
+  margin: 1.2rem auto;
+}
+
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .art-content {
@@ -218,7 +252,7 @@ h3 {
     margin-bottom: 20px;
   }
 
-  .join-cards,
+  .join-container,
   .challenge-section {
     flex-direction: column;
   }
@@ -236,6 +270,16 @@ h3 {
 
   .newsletter-form {
     width: 100%;
+  }
+
+  .join-card {
+    width: 90%;
+    max-width: 500px;
+    margin: auto auto 20px auto;
+  }
+
+  .footer-image {
+    margin: auto auto 20px auto;
   }
 }
 
